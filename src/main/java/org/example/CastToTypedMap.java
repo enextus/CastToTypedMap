@@ -15,4 +15,13 @@ public class CastToTypedMap {
 		return rawMap;
 	}
 
+	public static Map getRawMapBig() {
+
+		Map rawMap = new HashMap();
+		rawMap.put("date 4", LocalDate.of(1976, Month.NOVEMBER, 18));
+		rawMap.put("date 5", LocalDate.of(1976, Month.NOVEMBER, 18));
+		rawMap.put("date 6", LocalDate.of(1976, Month.NOVEMBER, 18));
+		return rawMap;
+	}
+
 }

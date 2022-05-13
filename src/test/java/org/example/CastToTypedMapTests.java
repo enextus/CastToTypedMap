@@ -12,9 +12,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CastToTypedMapTests {
 
 	@Test
-	void testGetRawMap() {
+	public void testGetRawMap() {
 		Map<String, LocalDate> result = CastToTypedMap.getRawMap();
 		assertEquals(result.get("date 2"), LocalDate.of(1992, Month.AUGUST, 8));
+	}
+
+	@Test
+	public void testGetRawMapBig() {
+		Map<String, LocalDate> result = CastToTypedMap.getRawMapBig();
+		assertEquals(result.get("date 6"), LocalDate.of(1976, Month.NOVEMBER, 18));
 	}
 
 	@Test
@@ -39,5 +45,3 @@ class CastToTypedMapTests {
 		assertEquals(castFromRawMap.get("date 2"), LocalDate.of(1992, Month.AUGUST, 8));
 	}
 }
-
-//Generated with love by TestMe :) Please report issues and submit feature requests at: http://weirddev.com/forum#!/testme
